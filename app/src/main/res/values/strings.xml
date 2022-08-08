@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Quiz app</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="Enter_your_name">Enter Your Name</string>
+    <string name="btn_start">Start</string>
+
+    <string name="Answer1">Australia</string>
+    <string name="q1option1">Armenia</string>
+    <string name="q1option2">austria</string>
+    <string name="q1option3">Australia</string>
+    <string name="q1option4">Argentina</string>
+
+    <string name="Answer2">brazil</string>
+    <string name="q2option1">brazil</string>
+    <string name="q2option2">fiji</string>
+    <string name="q2option3">Iran</string>
+    <string name="q2option4">Argentina</string>
+
+    <string name="Answer3">Canada</string>
+    <string name="q3option1">canada</string>
+    <string name="q3option2">fiji</string>
+    <string name="q3option3">Iran</string>
+    <string name="q3option4">Argentina</string>
+
+    <string name="Answer4">china</string>
+    <string name="q4option1">Armenia</string>
+    <string name="q4option2">north korea</string>
+    <string name="q4option3">japan</string>
+    <string name="q4option4">china</string>
+
+    <string name="Answer5">Israel</string>
+    <string name="q5option1">Armenia</string>
+    <string name="q5option2">UK</string>
+    <string name="q5option3">Germany</string>
+    <string name="q5option4">Israel</string>
+
+    <string name="Answer6">japan</string>
+    <string name="q6option1">china</string>
+    <string name="q6option2">japan</string>
+    <string name="q6option3">qatar</string>
+    <string name="q6option4">korea</string>
+
+    <string name="Answer7">saudi arabia</string>
+    <string name="q7option1">saudi arabia</string>
+    <string name="q7option2">koweit</string>
+    <string name="q7option3">qatar</string>
+    <string name="q7option4">Iran</string>
+
+    <string name="Answer8">turkey</string>
+    <string name="q8option1">china</string>
+    <string name="q8option2">turkey</string>
+    <string name="q8option3">canada</string>
+    <string name="q8option4">Argentina</string>
+
+    <string name="Answer9">UK</string>
+    <string name="q9option1">US</string>
+    <string name="q9option2">UK</string>
+    <string name="q9option3">Australia</string>
+    <string name="q9option4">Argentina</string>
+
+    <string name="Answer10">US</string>
+    <string name="q10option1">US</string>
+    <string name="q10option2">UK</string>
+    <string name="q10option3">Australia</string>
+    <string name="q10option4">Argentina</string>
+
+    <string name="Question1">what country does this flag belong to?</string>
+    <string name="check_answer_btn">check answer</string>
+
+    <string name="result">Result</string>
+    <string name="congrats">hey congratulations!</string>
+    <string name="score">your score is : </string>
+    <string name="finish">FINISH </string>
+
+
+</resources>
