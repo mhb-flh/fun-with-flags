@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
+        android:text="@string/fun_with_flags"
         android:textColor="@color/white"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +29,7 @@
         android:layout_marginEnd="25dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/primaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -60,6 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/Enter_your_name"
+                android:backgroundTint="@color/accent"
                 android:padding="15dp"
                 android:textSize="16dp" />
 
@@ -68,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:background="@drawable/btn"
                 android:text="@string/btn_start" />
 
 

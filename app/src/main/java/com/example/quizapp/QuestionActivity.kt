@@ -1,19 +1,13 @@
-package com.examp
+package com.example.quizapp
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.example.quizapp.Constants
-import com.example.quizapp.Questions
-import com.example.quizapp.R
 import com.example.quizapp.databinding.ActivityQuestionBinding
-import com.example.quizapp.ResultActivity as ResultActivity
 
 private lateinit var binding: ActivityQuestionBinding
 
@@ -22,15 +16,15 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition = 1
     private var mQuestionList: ArrayList<Questions>? = null
     private var mSelectedOptionPosition = 0
-    private var mCorrectAnswers=0
-    private var mUserName:String?=null
+    private var mCorrectAnswers = 0
+    private var mUserName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mUserName=intent.getStringExtra(Constants.USER_NAME)
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         mQuestionList = Constants.getQuestions()
         setQuestions()
@@ -50,7 +44,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         defaultOptionsView()
 
         if (mCurrentPosition == mQuestionList!!.size) {
-            binding.checkAnswer.text = "FINISH"
+            binding.checkAnswer.text = resources.getText(R.string.finish)
         } else {
             binding.checkAnswer.text = getString(R.string.check_answer_btn)
         }
@@ -78,6 +72,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
         for (option in optionView) {
             option.typeface = Typeface.DEFAULT
+            option.setTextColor(resources.getColor(R.color.white))
             option.background = ContextCompat.getDrawable(this, R.drawable.tv_border)
         }
     }
@@ -93,15 +88,19 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         when (answer) {
             1 -> {
                 binding.option1.background = ContextCompat.getDrawable(this, drawable)
+                binding.option1.setTextColor(resources.getColor(R.color.primaryDark))
             }
             2 -> {
                 binding.option2.background = ContextCompat.getDrawable(this, drawable)
+                binding.option2.setTextColor(resources.getColor(R.color.primaryDark))
             }
             3 -> {
                 binding.option3.background = ContextCompat.getDrawable(this, drawable)
+                binding.option3.setTextColor(resources.getColor(R.color.primaryDark))
             }
             4 -> {
                 binding.option4.background = ContextCompat.getDrawable(this, drawable)
+                binding.option4.setTextColor(resources.getColor(R.color.primaryDark))
             }
         }
     }
@@ -128,17 +127,16 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                             setQuestions()
                         }
                         else -> {
-                            val intent=Intent(this,ResultActivity::class.java)
-                            intent.putExtra(Constants.USER_NAME,mUserName)
+                            val intent = Intent(this, ResultActivity::class.java)
+                            intent.putExtra(Constants.USER_NAME, mUserName)
                             startActivity(intent)
                         }
                     }
-                }
-                else {
+                } else {
                     val question = mQuestionList?.get(mCurrentPosition - 1)
                     if (question!!.correctAnswer != mSelectedOptionPosition) {
                         answerView(mSelectedOptionPosition, R.drawable.tv_wrong)
-                    }else{
+                    } else {
                         mCorrectAnswers++
                     }
                     answerView(question.correctAnswer, R.drawable.tv_correct)
@@ -146,13 +144,13 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                     if (mCurrentPosition == mQuestionList!!.size) {
                         binding.checkAnswer.text = getString(R.string.finish)
                         val intent = Intent(this, ResultActivity::class.java)
-                        intent.putExtra(Constants.USER_NAME,mUserName)
-                        intent.putExtra(Constants.CORRECT_ANSWER,mCorrectAnswers)
-                        intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionList!!.size)
+                        intent.putExtra(Constants.USER_NAME, mUserName)
+                        intent.putExtra(Constants.CORRECT_ANSWER, mCorrectAnswers)
+                        intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionList!!.size)
                         startActivity(intent)
                         finish()
                     } else {
-                        binding.checkAnswer.text = "GO to next Question"
+                        binding.checkAnswer.text = getString(R.string.next_question)
                     }
                 }
                 mSelectedOptionPosition = 0

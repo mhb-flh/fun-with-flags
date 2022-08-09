@@ -12,6 +12,8 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_gravity="center">
 
         <TextView
@@ -26,7 +28,12 @@
             android:id="@+id/iv_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="35dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
             android:src="@drawable/ic_australia_flag"/>
         
         <LinearLayout
@@ -39,6 +46,7 @@
                 style="?android:progressBarStyleHorizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:progressTint="@color/accent"
                 android:layout_weight=".7"
                 android:max="10"
                 android:minHeight="30dp"
@@ -53,9 +61,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:padding="15dp"
-                android:textSize="14dp"
-                android:text="0/10"/>
+                android:padding="12dp"
+                android:textSize="14sp"
+                tools:text="0/10"/>
             
         </LinearLayout>
 
@@ -66,7 +74,7 @@
             android:text="@string/q1option1"
             android:gravity="center"
             android:background="@drawable/tv_border"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:padding="16dp"/>
 
         <TextView
@@ -76,7 +84,7 @@
             android:text="@string/q1option2"
             android:gravity="center"
             android:background="@drawable/tv_border"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:padding="16dp"/>
 
         <TextView
@@ -86,7 +94,7 @@
             android:text="@string/q1option3"
             android:gravity="center"
             android:background="@drawable/tv_border"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:padding="16dp"/>
 
         <TextView
@@ -96,7 +104,7 @@
             android:text="@string/q1option4"
             android:gravity="center"
             android:background="@drawable/tv_border"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:padding="16dp"/>
 
         <Button
@@ -104,10 +112,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/check_answer_btn"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp"
             android:background="@drawable/btn"
             style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
-            android:padding="25dp"/>
+            android:padding="22dp"/>
 
 
 
