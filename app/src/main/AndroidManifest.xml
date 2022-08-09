@@ -13,7 +13,7 @@
             android:name=".ResultActivity"
             android:exported="true" />
         <activity
-            android:name="com.examp.QuestionActivity"
+            android:name=".QuestionActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

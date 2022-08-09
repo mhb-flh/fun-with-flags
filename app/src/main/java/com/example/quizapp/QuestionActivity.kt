@@ -24,6 +24,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.decorView.systemUiVisibility= View.SYSTEM_UI_FLAG_FULLSCREEN
+
         mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         mQuestionList = Constants.getQuestions()
@@ -80,7 +82,6 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
     private fun selectedOption(tv: TextView, selectedOptionNumber: Int) {
         defaultOptionsView()
         mSelectedOptionPosition = selectedOptionNumber
-        tv.typeface = Typeface.DEFAULT_BOLD
         tv.background = ContextCompat.getDrawable(this, R.drawable.tv_border_clicked)
     }
 
