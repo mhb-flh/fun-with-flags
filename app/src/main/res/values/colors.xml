@@ -4,7 +4,7 @@
     <color name="primaryDark">#2E3239</color>
     <color name="accent">#A2B2EE</color>
     <color name="black">#26292B</color>
-
+    <color name="background">#1c2333</color>
     <color name="white">#F4FEFD</color>
     <color name="Red">#D60202</color>
     <color name="green">#00ED43</color>
